@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary: #4A4E69;
-    --color-secondary: #9A8C98;
-    --color-accent: #C9ADA7;
-    --color-background: #F2E9E4;
-    --color-foreground: #22223B;
+  --color-background: #F2E9E4 ;
+  --color-foreground: #22223B;   
+  --color-primary: #9C6B5E; /* cooler clay, slightly desaturated */
+  --color-secondary: #B292B8; /* refined neutral steel tone */
+  --color-accent: #CC6A74; /* soft red-pink */
+  --color-muted: #A5A5B5;        /* optional for low text contrast */
 }

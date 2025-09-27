@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, MapPin } from "lucide-react";
-
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="bg-foreground text-background py-10 mt-8">
@@ -7,31 +7,31 @@ function Footer() {
         
         {/* Brand / Intro */}
         <div>
-          <h2 className="text-xl font-bold text-primary">Maxwell</h2>
-          <p className="mt-2 text-sm text-muted">
+          <h2 className="text-xl font-bold text-secondary">Maxwell</h2>
+          <p className="mt-2 text-sm text-muted font-medium">
             Full-stack developer crafting modern, responsive, and scalable web apps.
           </p>
         </div>
 
         {/* Quick Navigation */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-3 text-secondary">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:text-primary">Home</a></li>
-            <li><a href="/about" className="hover:text-primary">About</a></li>
-            <li><a href="/contact" className="hover:text-primary">Contact</a></li>
-            <li><a href="/hire" className="hover:text-primary">Hire Me</a></li>
+            <li><Link to="/project" className="hover:text-accent">Project</Link></li>
+            <li><Link to="/about" className="hover:text-accent">About</Link></li>
+            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
+            <li><a href="/Keymoye_Resume.pdf" download="Keymoye_Resume.pdf" className="hover:text-muted">Resume</a></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Contact</h3>
+          <h3 className="text-lg font-semibold mb-3 text-secondary">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
-              <a href="mailto:youremail@example.com" className="hover:text-primary">
-                youremail@example.com
+              <a href="mailto:bowenmaxwell9@gmail.com" className="hover:text-accent">
+                bowenmaxwell9@gamil.com
               </a>
             </li>
             <li className="flex items-center space-x-2">
@@ -42,10 +42,12 @@ function Footer() {
 
           {/* Socials */}
           <div className="flex space-x-4 mt-4">
-            <a href="https://github.com/yourusername" target="_blank" className="hover:text-primary">
+            <a href="https://github.com/Keymoye" target="_blank"  
+            aria-label="Visit Maxwell Kimoi's GitHub profile" rel="noopener noreferrer" className="hover:text-accent">
               <Github className="h-5 w-5" />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" className="hover:text-primary">
+            <a href="https://linkedin.com/in/keymoye-ting-4965b934a" target="_blank" 
+            aria-label="Visit Maxwell Kimoi's LinkedIn profile" rel="noopener noreferrer" className="hover:text-accent">
               <Linkedin className="h-5 w-5" />
             </a>
           </div>
@@ -53,7 +55,7 @@ function Footer() {
       </div>
 
       {/* Bottom Line */}
-      <div className="mt-8 border-t border-muted pt-4 text-center text-xs text-muted">
+      <div className="mt-8 border-t border-secondary pt-4 text-center text-xs text-secondary">
         &copy; {new Date().getFullYear()} Maxwell. All rights reserved.
       </div>
     </footer>

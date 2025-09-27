@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/navbar";
-import Footer from ".components/footer";
+import Footer from "./components/footer";
 export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">

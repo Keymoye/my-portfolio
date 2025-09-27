@@ -12,21 +12,25 @@ function NavBar () {
         <>
           <nav className="bg-foreground p-4 justify-between items-center hidden md:flex">
             <div className='flex justify-center items-center space-x-2'>
-              <img src={logo} alt="Logo" className="h-10 w-10 text-primary"/>
+              <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded">
+                <img src={logo} alt="Logo" className="h-10 w-10" />
+              </Link>
               <h1 className="text-primary font-bold text-xl">Web Developer</h1>
             </div>
             <div className="md:space-x-6 lg:space-x-8 text-base lg:text-lg font-medium text-background">
-              <Link to="/" className="hover:bg-secondary px-3 py-2 rounded">Home</Link>
-              <Link to="/about" className="hover:bg-secondary px-3 py-2 rounded">About</Link>
-              <Link to="/contact" className="hover:bg-secondary px-3 py-2 rounded">Contact</Link>
-              <Link to="/resume" className="hover:bg-accent bg-primary px-3 py-2 rounded">Resume</Link>
+              <Link to="/project" className="hover:bg-accent px-3 py-2 rounded">Project</Link>
+              <Link to="/about" className="hover:bg-accent px-3 py-2 rounded">About</Link>
+              <Link to="/contact" className="hover:bg-accent px-3 py-2 rounded">Contact</Link>
+              <a href="/Keymoye_Resume.pdf" download="Keymoye_Resume.pdf" className="hover:bg-muted bg-primary px-3 py-2 rounded">Resume</a>
               
             </div>
           </nav>
            {/* Mobile Navigation */}
           <nav className="bg-foreground p-4 h-20 flex md:hidden justify-between items-center relative">
             <div className='flex justify-center items-center space-x-1'>
-              <img src={logo} alt="Logo" className="h-10 w-10"/>
+              <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded">
+                <img src={logo} alt="Logo" className="h-10 w-10" />
+              </Link>
               <h2 className='text-primary font-bold text-lg'>Web Developer</h2>
             </div>
             <div className="relative">
@@ -40,10 +44,10 @@ function NavBar () {
 
               {isOpen && (
                <div className="absolute right-4 top-16 w-48 bg-foreground text-background p-4 rounded shadow-lg flex flex-col space-y-2">
-                 <Link to="/" className="hover:bg-secondary px-3 py-2 rounded">Home</Link>
-                 <Link to="/about" className="hover:bg-secondary px-3 py-2 rounded">About</Link>
-                 <Link to="/contact" className="hover:bg-secondary px-3 py-2 rounded">Contact</Link>
-                 <Link to="/resume" className="bg-primary hover:bg-accent px-3 py-2 rounded text-background">Resume</Link>
+                 <Link to="/project" className="hover:bg-accent px-3 py-2 rounded">Project</Link>
+                 <Link to="/about" className="hover:bg-accent px-3 py-2 rounded">About</Link>
+                 <Link to="/contact" className="hover:bg-accent px-3 py-2 rounded">Contact</Link>
+                 <a href="/Keymoye_Resume.pdf" download="Keymoye_Resume.pdf" className="bg-primary hover:bg-muted px-3 py-2 rounded text-background">Resume</a>
                </div>
               )}
 

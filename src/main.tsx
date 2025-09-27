@@ -1,6 +1,7 @@
 import About from './pages/about.tsx'
 import Contact from './pages/contact.tsx'
-import Resume from './pages/resume.tsx'
+import Project from './pages/project.tsx';
+import NotFound from './pages/notfound.tsx';
 import { createRoot } from 'react-dom/client';
 import './index.css'
 import App from './App.tsx'
@@ -14,7 +15,8 @@ createRoot(document.getElementById('root')!).render(
         <Route index element={<App/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>
