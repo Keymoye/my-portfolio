@@ -31,7 +31,7 @@ function Footer() {
             <li className="flex items-center space-x-2">
               <Mail className="h-4 w-4" />
               <a href="mailto:bowenmaxwell9@gmail.com" className="hover:text-accent">
-                bowenmaxwell9@gamil.com
+                bowenmaxwell9@gmail.com
               </a>
             </li>
             <li className="flex items-center space-x-2">

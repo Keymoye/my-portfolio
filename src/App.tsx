@@ -1,7 +1,7 @@
 
 const App = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-12 gap-10 bg-background text-foreground">
+    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 md:px-12 gap-10 bg-background text-foreground">
       {/* Text Section */}
       <div className="flex-1 text-center md:text-left space-y-4 md:px-12">
         <h1 className="text-4xl md:text-5xl font-bold text-primary">
