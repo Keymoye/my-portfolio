@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import logo from '../assets/logo.png';
+import { HiBars3, HiXMark } from "react-icons/hi2";
+import logo from '../assets/logo.webp';
 function NavBar () {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,7 +39,7 @@ function NavBar () {
               className="h-8 w-8 flex text-background items-center justify-center hover:bg-accent"
               onClick={toggleMenu}
              >
-               {isOpen ? <X /> : <Menu />}
+               {isOpen ? <HiXMark /> : <HiBars3 />}
              </button>
 
               {isOpen && (

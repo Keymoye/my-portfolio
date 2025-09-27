@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function Footer() {
   return (
@@ -29,13 +29,13 @@ function Footer() {
           <h3 className="text-lg font-semibold mb-3 text-secondary">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center space-x-2">
-              <Mail className="h-4 w-4" />
+              <FaEnvelope className="h-4 w-4" />
               <a href="mailto:bowenmaxwell9@gmail.com" className="hover:text-accent">
                 bowenmaxwell9@gmail.com
               </a>
             </li>
             <li className="flex items-center space-x-2">
-              <MapPin className="h-4 w-4" />
+              <FaMapMarkerAlt className="h-4 w-4" />
               <span>Nairobi, Kenya</span>
             </li>
           </ul>
@@ -44,11 +44,11 @@ function Footer() {
           <div className="flex space-x-4 mt-4">
             <a href="https://github.com/Keymoye" target="_blank"  
             aria-label="Visit Maxwell Kimoi's GitHub profile" rel="noopener noreferrer" className="hover:text-accent">
-              <Github className="h-5 w-5" />
+              <FaGithub className="h-5 w-5" />
             </a>
             <a href="https://linkedin.com/in/keymoye-ting-4965b934a" target="_blank" 
             aria-label="Visit Maxwell Kimoi's LinkedIn profile" rel="noopener noreferrer" className="hover:text-accent">
-              <Linkedin className="h-5 w-5" />
+              <FaLinkedin className="h-5 w-5" />
             </a>
           </div>
         </div>

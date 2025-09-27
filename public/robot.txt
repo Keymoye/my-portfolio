@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://keymoye-portfolio.vercel.app/sitemap.xml

@@ -1,3 +1,4 @@
+import profileImg from "./assets/profile.webp";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       {/* Profile Image */}
       <div className="flex-1 flex justify-center mt-8 md:mt-0">
         <img
-          src="/profile.jpg"
+          src={profileImg}
           alt="Maxwell Kimoi"
           className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg border-4 border-primary transition-transform duration-300 hover:scale-105"
         />
