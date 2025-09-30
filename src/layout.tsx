@@ -1,18 +1,17 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
+import AnimatedBackground from "./components/animated-background";
+
 export default function Layout() {
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Navbar appears on every page */}
+    <div className="min-h-screen flex flex-col relative">
+      <AnimatedBackground />
       <NavBar />
-
-      {/* Page content goes here */}
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         <Outlet />
       </main>
-      {/* Footer appears on every page */}
-      <Footer /> 
+      <Footer />
     </div>
   );
 }

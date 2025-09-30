@@ -1,32 +1,58 @@
+import { motion } from 'framer-motion';
 import profileImg from "./assets/profile.webp";
 
 const App = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 md:px-12 gap-10 bg-background text-foreground">
-      {/* Text Section */}
-      <div className="flex-1 text-center md:text-left space-y-4 md:px-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">
+    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 md:px-12 gap-10 bg-background text-foreground overflow-hidden">
+      <motion.div
+        className="flex-1 text-center md:text-left space-y-4 md:px-12"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold text-primary"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
           I'm Maxwell Kimoi
-        </h1>
+        </motion.h1>
 
-        <p className="text-lg text-muted mb-6 max-w-lg mx-auto md:mx-0">
+        <motion.p
+          className="text-lg text-muted mb-6 max-w-lg mx-auto md:mx-0"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+        >
           Crafting intuitive interfaces and clean code — turning theory into real, scalable front-end experiences.
-        </p>
+        </motion.p>
 
-        <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground tracking-wide">
+        <motion.p
+          className="text-lg sm:text-xl md:text-2xl font-medium text-foreground tracking-wide"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+        >
           Front-end <span className="text-primary font-semibold"> ||</span> Backend{" "}
           <span className="text-primary font-semibold">||</span> Fullstack Developer
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
-      {/* Profile Image */}
-      <div className="flex-1 flex justify-center mt-8 md:mt-0">
-        <img
+      <motion.div
+        className="flex-1 flex justify-center mt-8 md:mt-0"
+        initial={{ opacity: 0, x: 50, scale: 0.8 }}
+        animate={{ opacity: 1, x: 0, scale: 1 }}
+        transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
+      >
+        <motion.img
           src={profileImg}
           alt="Maxwell Kimoi"
-          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg border-4 border-primary transition-transform duration-300 hover:scale-105"
+          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg border-4 border-primary"
+          whileHover={{ scale: 1.05, rotate: 5 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };

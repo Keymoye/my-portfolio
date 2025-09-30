@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="bg-foreground text-background py-10 mt-8">
@@ -42,14 +44,28 @@ function Footer() {
 
           {/* Socials */}
           <div className="flex space-x-4 mt-4">
-            <a href="https://github.com/Keymoye" target="_blank"  
-            aria-label="Visit Maxwell Kimoi's GitHub profile" rel="noopener noreferrer" className="hover:text-accent">
+            <motion.a
+              href="https://github.com/Keymoye"
+              target="_blank"
+              aria-label="Visit Maxwell Kimoi's GitHub profile"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <FaGithub className="h-5 w-5" />
-            </a>
-            <a href="https://linkedin.com/in/keymoye-ting-4965b934a" target="_blank" 
-            aria-label="Visit Maxwell Kimoi's LinkedIn profile" rel="noopener noreferrer" className="hover:text-accent">
+            </motion.a>
+            <motion.a
+              href="https://linkedin.com/in/keymoye-ting-4965b934a"
+              target="_blank"
+              aria-label="Visit Maxwell Kimoi's LinkedIn profile"
+              rel="noopener noreferrer"
+              className="hover:text-accent transition-colors"
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <FaLinkedin className="h-5 w-5" />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

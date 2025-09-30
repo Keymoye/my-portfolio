@@ -1,7 +1,10 @@
-// src/pages/Projects.tsx
+import { motion } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Projects() {
+  const headingAnim = useScrollAnimation({ threshold: 0.3 });
+
   const projects = [
     {
       title: "Weather App",
@@ -29,63 +32,99 @@ export default function Projects() {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground px-6 py-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
+      <motion.h1
+        ref={headingAnim.ref as React.RefObject<HTMLHeadingElement>}
+        className="text-4xl md:text-5xl font-bold text-center text-primary mb-10"
+        initial={{ opacity: 0, y: -30 }}
+        animate={headingAnim.isVisible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6 }}
+      >
         My Projects
-      </h1>
+      </motion.h1>
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <motion.div
+        className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        animate={headingAnim.isVisible ? "visible" : "hidden"}
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.title}
-            className="bg-foreground/5 border border-muted/30 rounded-xl p-6 flex flex-col justify-between shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 hover:border-primary/50"
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            className="bg-foreground/5 border border-muted/30 rounded-xl p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:border-primary/50 transition-all"
           >
-            {/* Project Title */}
             <h2 className="text-2xl font-semibold text-primary mb-3">
               {project.title}
             </h2>
 
-            {/* Description */}
             <p className="text-foreground mb-4 text-sm leading-relaxed">
               {project.description}
             </p>
 
-            {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tech.map((t) => (
-                <span
+                <motion.span
                   key={t}
                   className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full"
+                  whileHover={{ scale: 1.1 }}
                 >
                   {t}
-                </span>
+                </motion.span>
               ))}
             </div>
 
-            {/* Buttons */}
             <div className="flex items-center justify-between">
-              <a
+              <motion.a
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm bg-primary text-background px-4 py-2 rounded-md hover:bg-accent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Live <FaExternalLinkAlt className="text-xs" />
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm border border-muted text-foreground px-4 py-2 rounded-md hover:border-accent transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 GitHub <FaGithub className="text-base" />
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 }
