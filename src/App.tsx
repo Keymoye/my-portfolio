@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import profileImg from "./assets/profile.webp";
 
 const App = () => {
   return (
@@ -45,13 +44,15 @@ const App = () => {
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
       >
-        <motion.img
-          src={profileImg}
-          alt="Maxwell Kimoi"
-          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg border-4 border-primary"
+        <motion.div
+          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg border-4 border-primary flex items-center justify-center"
           whileHover={{ scale: 1.05, rotate: 5 }}
           transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-        />
+        >
+          <span className="text-6xl sm:text-8xl md:text-9xl font-bold text-background">
+            MK
+          </span>
+        </motion.div>
       </motion.div>
     </section>
   );

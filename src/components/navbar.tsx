@@ -1,15 +1,48 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '../assets/logo.webp';
 import ThemeToggle from './theme-toggle';
-function NavBar () {
+
+interface NavBarProps {}
+
+function NavBar ({}: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        closeMenu();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
     return (
         <>
           <motion.nav
@@ -20,13 +53,13 @@ function NavBar () {
           >
             <div className='flex justify-center items-center space-x-2'>
               <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded transition-all">
-                <motion.img
-                  src={logo}
-                  alt="Logo"
-                  className="h-10 w-10"
+                <motion.div
+                  className="h-10 w-10 rounded-full bg-primary flex items-center justify-center"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
-                />
+                >
+                  <span className="text-background font-bold text-lg">M</span>
+                </motion.div>
               </Link>
               <h1 className="text-primary font-bold text-xl">Web Developer</h1>
             </div>
@@ -47,16 +80,20 @@ function NavBar () {
           >
             <div className='flex justify-center items-center space-x-1'>
               <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded transition-all">
-                <img src={logo} alt="Logo" className="h-10 w-10" />
+                <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
+                  <span className="text-background font-bold text-lg">M</span>
+                </div>
               </Link>
               <h2 className='text-primary font-bold text-lg'>Web Developer</h2>
             </div>
             <div className="flex items-center gap-3">
               <ThemeToggle />
-              <div className="relative">
+              <div className="relative" ref={menuRef}>
                 <motion.button
                   aria-label="Toggle menu"
-                  className="h-8 w-8 flex text-background items-center justify-center hover:bg-accent rounded"
+                  aria-expanded={isOpen}
+                  aria-controls="mobile-menu"
+                  className="h-10 w-10 flex text-background items-center justify-center hover:bg-accent rounded text-2xl"
                   onClick={toggleMenu}
                   whileTap={{ scale: 0.9 }}
                 >
@@ -66,16 +103,51 @@ function NavBar () {
                 <AnimatePresence>
                   {isOpen && (
                     <motion.div
-                      className="absolute right-0 top-12 w-48 bg-foreground text-background p-4 rounded shadow-lg flex flex-col space-y-2"
-                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      id="mobile-menu"
+                      role="navigation"
+                      aria-label="Mobile navigation menu"
+                      className="absolute right-0 top-14 w-52 bg-foreground text-background p-4 rounded-lg shadow-xl flex flex-col space-y-2 z-50 border border-muted"
+                      initial={{ opacity: 0, y: -20, scale: 0.9 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                      transition={{ duration: 0.2 }}
+                      exit={{ opacity: 0, y: -20, scale: 0.9 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: [0.25, 0.46, 0.45, 0.94]
+                      }}
                     >
-                      <Link to="/project" className="hover:bg-accent px-3 py-2 rounded transition-all">Project</Link>
-                      <Link to="/about" className="hover:bg-accent px-3 py-2 rounded transition-all">About</Link>
-                      <Link to="/contact" className="hover:bg-accent px-3 py-2 rounded transition-all">Contact</Link>
-                      <a href="/Keymoye_Resume.pdf" download="Keymoye_Resume.pdf" className="bg-primary hover:bg-muted px-3 py-2 rounded text-background transition-all">Resume</a>
+                      <Link
+                        to="/project"
+                        className="hover:bg-accent px-3 py-2 rounded transition-all font-medium"
+                        onClick={closeMenu}
+                        role="menuitem"
+                      >
+                        Project
+                      </Link>
+                      <Link
+                        to="/about"
+                        className="hover:bg-accent px-3 py-2 rounded transition-all font-medium"
+                        onClick={closeMenu}
+                        role="menuitem"
+                      >
+                        About
+                      </Link>
+                      <Link
+                        to="/contact"
+                        className="hover:bg-accent px-3 py-2 rounded transition-all font-medium"
+                        onClick={closeMenu}
+                        role="menuitem"
+                      >
+                        Contact
+                      </Link>
+                      <a
+                        href="/Keymoye_Resume.pdf"
+                        download="Keymoye_Resume.pdf"
+                        className="bg-primary hover:bg-muted px-3 py-2 rounded text-background transition-all font-medium text-center"
+                        onClick={closeMenu}
+                        role="menuitem"
+                      >
+                        Resume
+                      </a>
                     </motion.div>
                   )}
                 </AnimatePresence>
