@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import profileImg from "./assets/profile.webp";
 
 const App = () => {
   return (
@@ -7,7 +8,7 @@ const App = () => {
         className="flex-1 text-center md:text-left space-y-4 md:px-12"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <motion.h1
           className="text-4xl md:text-5xl font-bold text-primary"
@@ -24,7 +25,8 @@ const App = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          Crafting intuitive interfaces and clean code — turning theory into real, scalable front-end experiences.
+          Crafting intuitive interfaces and clean code — turning theory into real,
+          scalable front-end experiences.
         </motion.p>
 
         <motion.p
@@ -33,7 +35,7 @@ const App = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          Front-end <span className="text-primary font-semibold"> ||</span> Backend{" "}
+          Front-end <span className="text-primary font-semibold"> || </span> Backend{" "}
           <span className="text-primary font-semibold">||</span> Fullstack Developer
         </motion.p>
       </motion.div>
@@ -42,16 +44,22 @@ const App = () => {
         className="flex-1 flex justify-center mt-8 md:mt-0"
         initial={{ opacity: 0, x: 50, scale: 0.8 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
-        transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
+        transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
       >
         <motion.div
-          className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg border-4 border-primary flex items-center justify-center"
+          className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-primary to-accent shadow-lg flex items-center justify-center overflow-hidden"
           whileHover={{ scale: 1.05, rotate: 5 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          <span className="text-6xl sm:text-8xl md:text-9xl font-bold text-background">
-            MK
-          </span>
+          <motion.img
+            src={profileImg}
+            alt="Profile picture"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          />
         </motion.div>
       </motion.div>
     </section>
