@@ -3,6 +3,8 @@ import { useState, useEffect, useRef } from 'react';
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './theme-toggle';
+import logo from "../assets/logo.webp";
+
 
 interface NavBarProps {}
 
@@ -46,20 +48,25 @@ function NavBar ({}: NavBarProps) {
     return (
         <>
           <motion.nav
-            className="bg-foreground p-4 justify-between items-center hidden md:flex"
+            className="bg-foreground p-4 justify-between items-center hidden md:flex "
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ type: 'spring', stiffness: 100, damping: 20 }}
           >
             <div className='flex justify-center items-center space-x-2'>
               <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded transition-all">
-                <motion.div
-                  className="h-10 w-10 rounded-full bg-primary flex items-center justify-center"
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <span className="text-background font-bold text-lg">M</span>
-                </motion.div>
+                 <motion.div
+                   className="h-10 w-10 rounded-full bg-primary flex items-center justify-center overflow-hidden"
+                   whileHover={{ rotate: 360 }}
+                   transition={{ duration: 0.6 }}
+              >
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                  </motion.div>
               </Link>
               <h1 className="text-primary font-bold text-xl">Web Developer</h1>
             </div>
@@ -80,10 +87,20 @@ function NavBar ({}: NavBarProps) {
           >
             <div className='flex justify-center items-center space-x-1'>
               <Link to="/" className="flex items-center hover:bg-muted px-2 py-1 rounded transition-all">
-                <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-background font-bold text-lg">M</span>
-                </div>
+                <motion.div
+                  className="h-10 w-10 rounded-full bg-primary flex items-center justify-center overflow-hidden"
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                >
+                 <img
+                   src={logo}
+                   alt="Logo"
+                   loading="lazy"
+                   className="w-full h-full object-cover"
+                 />
+                </motion.div>
               </Link>
+
               <h2 className='text-primary font-bold text-lg'>Web Developer</h2>
             </div>
             <div className="flex items-center gap-3">
