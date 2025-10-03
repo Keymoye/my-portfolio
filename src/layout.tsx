@@ -8,7 +8,7 @@ export default function Layout() {
     <div className="min-h-screen flex flex-col relative">
       <AnimatedBackground />
       <NavBar />
-      <main className="flex-1 relative z-10 mt-10 ">
+      <main className="flex-1 relative z-10 mt-10">
         <Outlet />
       </main>
       <Footer />
