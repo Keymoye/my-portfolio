@@ -29,11 +29,7 @@ This portfolio demonstrates production-level quality with a focus on performance
 - **Tailwind CSS** - Utility-first styling
 - **Framer Motion** - Animation library
 - **React Router** - Client-side routing
-
-### Backend & Infrastructure
-- **Supabase Edge Functions** - Serverless API endpoints
-- **Resend API** - Email delivery service
-
+- 
 ### Development Tools
 - **Vitest** - Unit and integration testing
 - **React Testing Library** - Component testing utilities
@@ -58,49 +54,12 @@ cd my-portfolio
 npm install
 ```
 
-3. Create a `.env` file in the root directory:
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-4. Start the development server:
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
 The application will be available at `http://localhost:5173`
-
-## Email API Setup
-
-### Setting Up Resend
-
-1. Create a Resend account at [resend.com](https://resend.com)
-2. Get your API key from the Resend dashboard
-3. Configure the API key in your Supabase project:
-   - Go to Supabase Dashboard > Project Settings > Edge Functions
-   - Add secret: `RESEND_API_KEY=your_resend_api_key`
-
-### Configuring the Email Function
-
-Update the recipient email in `supabase/functions/send-email/index.ts`:
-
-```typescript
-const emailBody = {
-  from: "Portfolio Contact <onboarding@resend.dev>",
-  to: ["your-email@example.com"], // Update this
-  subject: `Portfolio Contact from ${name}`,
-  // ...
-};
-```
-
-### Deploying the Edge Function
-
-The Edge Function is automatically deployed. To redeploy manually:
-
-```bash
-npm run deploy:functions
-```
 
 ## Testing
 
@@ -152,12 +111,7 @@ The project includes tests for:
    - Go to [vercel.com](https://vercel.com)
    - Click "Import Project"
    - Select your repository
-
-3. Configure environment variables in Vercel:
-   - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
-
-4. Deploy
+3. Deploy
 
 ### Build Configuration
 
@@ -182,9 +136,6 @@ my-portfolio/
 │   ├── assets/           # Images and static files
 │   ├── App.tsx           # Main app component
 │   └── main.tsx          # Application entry point
-├── supabase/
-│   └── functions/        # Supabase Edge Functions
-│       └── send-email/   # Email sending function
 ├── public/               # Static assets
 └── ...config files
 ```
@@ -222,7 +173,7 @@ MIT License - feel free to use this project as a template for your own portfolio
 For questions or inquiries, use the contact form on the website or reach out via:
 - Email: maxwell@example.com
 - LinkedIn: [Maxwell Kimoi](https://linkedin.com/in/maxwellkimoi)
-- GitHub: [maxwellkimoi](https://github.com/maxwellkimoi)
+- GitHub: [maxwellkimoi](https://github.com/Keymoye)
 
 ---
 
