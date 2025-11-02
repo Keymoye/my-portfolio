@@ -33,7 +33,7 @@ export default function Projects() {
      {
       title: "E-Commerce Website",
       description:
-        "A modern e-commerce web app built with Next.js,Typescript, and Supabase — featuring seamless authentication, dynamic product listings, and a clean, responsive UI powered by Tailwind CSS and Framer Motion for smooth animations.",
+        "(In Development Process)A modern e-commerce web app built with Next.js,Typescript, and Supabase — featuring seamless authentication, dynamic product listings, and a clean, responsive UI powered by Tailwind CSS and Framer Motion for smooth animations.",
       tech: ["Next", "TypeScript", "Tailwind CSS","Supabase","Zustand","RHF + Zod","Framer Motion"],
       live: "https://e-commerce-keystore.vercel.app",
       github: "https://github.com/Keymoye/e-commerce",
