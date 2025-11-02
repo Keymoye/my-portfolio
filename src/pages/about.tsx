@@ -58,7 +58,7 @@ export default function About() {
         <p className="text-lg text-foreground">
           Although I've explored full-stack technologies, my current focus is on mastering
           <span className="text-accent font-semibold"> front-end development</span>.
-          I'm deeply confident in my theoretical background — now I\'m translating that into practical, real-world projects.
+          I'm deeply confident in my theoretical background — now I'm translating that into practical, real-world projects.
           This portfolio marks my first fully self-built project from scratch, a big step from my earlier guided tutorials.
         </p>
 
