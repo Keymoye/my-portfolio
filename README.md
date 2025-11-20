@@ -1,180 +1,220 @@
-# Maxwell Kimoi | Full-Stack Developer Portfolio
+# 🌐 Maxwell Kimoi — Full-Stack Developer Portfolio
 
-A modern, responsive portfolio website built with React, TypeScript, and Vite, showcasing professional web development projects and skills.
+A modern, fast, and fully responsive **developer portfolio** built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
+Designed with premium UI/UX principles, smooth animations, a production-grade contact workflow, and perfect Lighthouse scores.
 
-## Overview
+---
 
-This portfolio demonstrates production-level quality with a focus on performance, accessibility, and user experience. The application features smooth animations, dark/light theme toggle, and a fully functional contact form integrated with email delivery.
+<div align="center">
 
-## Features
+[![Vercel](https://img.shields.io/github/deployments/Keymoye/my-portfolio/Production?label=vercel%20deploy&logo=vercel&style=for-the-badge)](https://keymoye-portfolio.vercel.app)
+[![License](https://img.shields.io/github/license/Keymoye/my-portfolio?style=for-the-badge)](./LICENSE)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-5-purple?style=for-the-badge&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38b2ac?style=for-the-badge&logo=tailwindcss)
 
-- **Responsive Design**: Optimized for all screen sizes from mobile to desktop
-- **Dark/Light Theme**: Seamless theme switching with persistent preference
-- **Smooth Animations**: Built with Framer Motion for fluid page transitions and micro-interactions
-- **Accessible Navigation**: ARIA-compliant mobile menu with keyboard navigation support
-- **Functional Contact Form**:
-  - Real-time validation
-  - Email delivery via Resend API and Supabase Edge Functions
-  - Loading states and error handling
-- **Type-Safe**: Full TypeScript implementation
-- **Testing Suite**: Comprehensive tests with Vitest and React Testing Library
-- **Code Quality**: ESLint and Prettier configured for consistent code style
+</div>
 
-## Tech Stack
+---
 
-### Frontend
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Utility-first styling
-- **Framer Motion** - Animation library
-- **React Router** - Client-side routing
-- 
-### Development Tools
-- **Vitest** - Unit and integration testing
-- **React Testing Library** - Component testing utilities
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
+![Portfolio Screenshot](./public/screenshot-2.webp)
 
-## Installation Steps
+🧭 **Live Demo:**  
+https://keymoye-portfolio.vercel.app
 
-### Prerequisites
-- Node.js 18+ and npm
+---
 
-### Setup
+## ✨ Overview
 
-1. Clone the repository:
+This portfolio represents your **professional identity** as a developer — crafted with clean architecture, smooth animations, a strong focus on accessibility, perfect performance scores, and a secure contact workflow powered by **Resend API + Supabase Edge Functions**.
+
+It demonstrates excellence in:
+
+- UI polish  
+- Component architecture  
+- Accessibility  
+- Full-stack integration  
+- Testing and code quality  
+- Production-ready performance  
+
+---
+
+## 🚀 Features
+
+| Icon | Feature | Description |
+| :--: | ------- | ----------- |
+| 🎨 | **Modern UI** | Smooth animations, responsive layout, elegant design |
+| 🌓 | **Dark / Light Theme** | Persistent theme toggle using local storage |
+| 🧭 | **Accessible Navigation** | Full keyboard support + ARIA-compliant mobile menu |
+| ✉️ | **Contact Form (Production-Ready)** | Email delivery via Resend API + validation + error states |
+| ⚡ | **High Performance** | Perfect Lighthouse scores across all categories |
+| 🧪 | **Tested Components** | Vitest + React Testing Library |
+| 🧱 | **Type-Safe Codebase** | Built fully with TypeScript |
+| 🗂️ | **Organized Architecture** | Clean folder structure and component reuse |
+
+---
+
+## 🛠 Tech Stack
+
+### **Frontend**
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Router
+
+### **Build & Tooling**
+- Vite
+- ESLint + Prettier
+- Vitest + React Testing Library
+
+### **Backend Integration**
+- Resend API (email)
+- Supabase Edge Functions
+
+---
+
+## 📁 Project Structure
+
+```
+my-portfolio/
+├── public/
+│   └── screenshot-2.webp     # Main portfolio screenshot
+├── src/
+│   ├── assets/
+│   │   ├── lighthouse-3.webp # Lighthouse screenshot 1
+│   │   └── lighthouse-4.webp # Lighthouse screenshot 2
+│   ├── components/           # Reusable UI components
+│   ├── pages/                # Page-level components
+│   ├── hooks/                # Custom hooks
+│   ├── test/                 # Tests (Vitest + RTL)
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+├── README.md
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
+## 📊 Lighthouse Performance Report
+
+| Category           | Score |
+| ------------------ | :---: |
+| **Performance**    |  100  |
+| **Accessibility**  |  100  |
+| **Best Practices** |  100  |
+| **SEO**            |  100  |
+
+### Core Web Vitals
+
+| Metric | Value |
+| ------ | ----- |
+| **FCP** (First Contentful Paint) | 0.5 s |
+| **LCP** (Largest Contentful Paint) | 0.5 s |
+| **TBT** (Total Blocking Time) | 40 ms |
+| **CLS** (Cumulative Layout Shift) | 0 |
+| **Speed Index** | 1.0 s |
+
+**Lighthouse Screenshots:**
+
+![Lighthouse Screenshot 1](./src/assets/lighthouse-3.webp)  
+![Lighthouse Screenshot 2](./src/assets/lighthouse-4.webp)
+
+---
+
+## 🧩 Installation & Setup
+
+1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/Keymoye/my-portfolio.git
 cd my-portfolio
 ```
 
-2. Install dependencies:
+2. **Install dependencies**
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. **Run locally**
 ```bash
 npm run dev
 ```
 
-The application will be available at `http://localhost:5173`
+4. **Build for production**
+```bash
+npm run build
+```
 
-## Testing
+5. **Preview production build**
+```bash
+npm run preview
+```
 
-Run the test suite:
+---
+
+## 🧪 Testing
+
+Run the full test suite:
 
 ```bash
 npm test
 ```
 
-Run tests with UI:
+Run tests in UI mode:
 
 ```bash
 npm run test:ui
 ```
 
-Generate coverage report:
+Generate coverage:
 
 ```bash
 npm run test:coverage
 ```
 
-### Test Coverage
+---
 
-The project includes tests for:
-- Navbar component (menu toggle, accessibility, keyboard navigation)
-- Contact form (validation, submission, error handling)
-- Home page rendering
-- Core functionality and user interactions
+## 🌍 Deployment (Vercel)
 
-## Scripts
+This project is deployed on **Vercel**.
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-- `npm test` - Run tests
-- `npm run test:ui` - Run tests with UI
-- `npm run test:coverage` - Generate test coverage
-
-## Deployment Instructions (Vercel)
-
-### Quick Deploy
-
-1. Push your code to GitHub
-
-2. Import to Vercel:
-   - Go to [vercel.com](https://vercel.com)
-   - Click "Import Project"
-   - Select your repository
-3. Deploy
-
-### Build Configuration
-
-Vercel will automatically detect Vite and use these settings:
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Install Command**: `npm install`
-
-### Custom Domain
-
-After deployment, you can add a custom domain in Vercel Dashboard > Domains.
-
-## Project Structure
-
-```
-my-portfolio/
-├── src/
-│   ├── components/        # Reusable UI components
-│   ├── pages/            # Page components
-│   ├── hooks/            # Custom React hooks
-│   ├── test/             # Test files
-│   ├── assets/           # Images and static files
-│   ├── App.tsx           # Main app component
-│   └── main.tsx          # Application entry point
-├── public/               # Static assets
-└── ...config files
-```
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Performance Optimizations
-
-- Code splitting with React.lazy
-- Optimized animations with Framer Motion
-- Tailwind CSS purging for minimal bundle size
-- Image optimization
-- Lazy loading for routes
-
-## Accessibility
-
-- Semantic HTML structure
-- ARIA labels and roles
-- Keyboard navigation support
-- Screen reader friendly
-- Focus management
-- Color contrast compliance
-
-## License
-
-MIT License - feel free to use this project as a template for your own portfolio.
-
-## Contact
-
-For questions or inquiries, use the contact form on the website or reach out via:
-- Email: maxwell@example.com
-- LinkedIn: [Maxwell Kimoi](https://linkedin.com/in/maxwellkimoi)
-- GitHub: [maxwellkimoi](https://github.com/Keymoye)
+**Build settings:**
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install`
 
 ---
 
-Built with passion by Maxwell Kimoi
+## 🧪 Test Environment (for Lighthouse report)
+
+- **Device:** Emulated Desktop  
+- **Browser:** Chromium 142  
+- **Lighthouse:** 12.8.2  
+- **Session:** Initial page load  
+- **Throttling:** Custom  
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**.  
+See [LICENSE](./LICENSE) for more details.
+
+---
+
+## 🧑‍💻 Author
+
+**Maxwell Kimoi (Keymoye)**  
+📍 Nairobi, Kenya  
+💼 Full-Stack Developer — React • TypeScript • Tailwind • Vite  
+🌐 https://keymoye-portfolio.vercel.app  
+🐙 GitHub: https://github.com/Keymoye  
+📧 Email: bowenmaxwell9@gmail.com
+
+---
+
+⭐ **If you found this project useful, please consider starring the repository!**
+
