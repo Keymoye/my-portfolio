@@ -154,22 +154,20 @@ pnpm run preview
 ```
 
 ---
-Contact Form (Formspree)
+# Contact Form (Formspree)
 
-This project uses Formspree for secure email delivery.
+This project uses **Formspree** for secure email delivery.
 
-Configuration Steps:
+## Configuration Steps
 
-Visit: https://formspree.io
+1. Visit [Formspree](https://formspree.io)  
+2. Create a new form endpoint  
+3. Replace your form `action` with your endpoint:
 
-Create a new form endpoint
-
-Replace your form action:
-
+```html
 <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
-
-
-Optional: add custom form validation with TypeScript
+  <!-- your form fields -->
+</form>
 
 ## 🧪 Testing
 
