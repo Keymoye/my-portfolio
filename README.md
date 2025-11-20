@@ -1,4 +1,4 @@
-# 🌐 Maxwell Kimoi — Full-Stack Developer Portfolio
+# 🌐 Maxwell Kimoi — Frontend Developer Portfolio
 
 A modern, fast, and fully responsive **developer portfolio** built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
 Designed with premium UI/UX principles, smooth animations, a production-grade contact workflow, and perfect Lighthouse scores.
@@ -27,14 +27,14 @@ https://keymoye-portfolio.vercel.app
 
 ## ✨ Overview
 
-This portfolio represents your **professional identity** as a developer — crafted with clean architecture, smooth animations, a strong focus on accessibility, perfect performance scores, and a secure contact workflow powered by **Resend API + Supabase Edge Functions**.
+This portfolio represents your **professional identity** as a developer — crafted with clean architecture, smooth animations, a strong focus on accessibility, perfect performance scores, and a secure contact workflow powered by **Formspree**.
 
 It demonstrates excellence in:
 
 - UI polish  
 - Component architecture  
-- Accessibility  
-- Full-stack integration  
+- Accessibility
+- Full-stack integration(via Formspree)  
 - Testing and code quality  
 - Production-ready performance  
 
@@ -47,7 +47,7 @@ It demonstrates excellence in:
 | 🎨 | **Modern UI** | Smooth animations, responsive layout, elegant design |
 | 🌓 | **Dark / Light Theme** | Persistent theme toggle using local storage |
 | 🧭 | **Accessible Navigation** | Full keyboard support + ARIA-compliant mobile menu |
-| ✉️ | **Contact Form (Production-Ready)** | Email delivery via Resend API + validation + error states |
+| ✉️ | **Contact Form (Formspree)** | Secure submission + validation + loading & error states |
 | ⚡ | **High Performance** | Perfect Lighthouse scores across all categories |
 | 🧪 | **Tested Components** | Vitest + React Testing Library |
 | 🧱 | **Type-Safe Codebase** | Built fully with TypeScript |
@@ -68,10 +68,10 @@ It demonstrates excellence in:
 - Vite
 - ESLint + Prettier
 - Vitest + React Testing Library
-
+- pnpm (package manager)
+  
 ### **Backend Integration**
-- Resend API (email)
-- Supabase Edge Functions
+- Formspree (contact form handling)
 
 ---
 
@@ -114,9 +114,9 @@ my-portfolio/
 | ------ | ----- |
 | **FCP** (First Contentful Paint) | 0.5 s |
 | **LCP** (Largest Contentful Paint) | 0.5 s |
-| **TBT** (Total Blocking Time) | 40 ms |
+| **TBT** (Total Blocking Time) | 10 ms |
 | **CLS** (Cumulative Layout Shift) | 0 |
-| **Speed Index** | 1.0 s |
+| **Speed Index** | O.9 s |
 
 **Lighthouse Screenshots:**
 
@@ -135,44 +135,60 @@ cd my-portfolio
 
 2. **Install dependencies**
 ```bash
-npm install
+pnpm install
 ```
 
 3. **Run locally**
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 4. **Build for production**
 ```bash
-npm run build
+pnpm run build
 ```
 
 5. **Preview production build**
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 ---
+Contact Form (Formspree)
+
+This project uses Formspree for secure email delivery.
+
+Configuration Steps:
+
+Visit: https://formspree.io
+
+Create a new form endpoint
+
+Replace your form action:
+
+<form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+
+
+Optional: add custom form validation with TypeScript
 
 ## 🧪 Testing
 
 Run the full test suite:
 
 ```bash
-npm test
+pnpm test
 ```
 
 Run tests in UI mode:
 
 ```bash
-npm run test:ui
+pnpm run test:ui
 ```
 
 Generate coverage:
 
 ```bash
-npm run test:coverage
+pnpm run test:coverage
 ```
 
 ---
@@ -182,9 +198,9 @@ npm run test:coverage
 This project is deployed on **Vercel**.
 
 **Build settings:**
-- Build command: `npm run build`
+- Build command: `pnpm run build`
 - Output directory: `dist`
-- Install command: `npm install`
+- Install command: `pnpm install`
 
 ---
 
