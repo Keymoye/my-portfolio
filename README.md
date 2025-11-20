@@ -168,6 +168,8 @@ This project uses **Formspree** for secure email delivery.
 <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
   <!-- your form fields -->
 </form>
+```
+---
 
 ## 🧪 Testing
 
