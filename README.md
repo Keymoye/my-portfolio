@@ -27,7 +27,7 @@ https://keymoye-portfolio.vercel.app
 
 ## ✨ Overview
 
-This portfolio represents your **professional identity** as a developer — crafted with clean architecture, smooth animations, a strong focus on accessibility, perfect performance scores, and a secure contact workflow powered by **Formspree**.
+This portfolio represents my **professional identity** as a developer — crafted with clean architecture, smooth animations, a strong focus on accessibility, perfect performance scores, and a secure contact workflow powered by **Formspree**.
 
 It demonstrates excellence in:
 
