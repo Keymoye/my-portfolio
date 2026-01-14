@@ -1,34 +1,53 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <footer className="bg-foreground text-background py-10 mt-8">
+    <footer className="bg-foreground text-background py-10">
       <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        
         {/* Brand / Intro */}
         <div>
-          <h2 className="text-xl font-bold text-secondary">Maxwell</h2>
-          <p className="mt-2 text-sm text-muted font-medium">
-            Full-stack developer crafting modern, responsive, and scalable web apps.
+          <h2 className="text-xl font-bold text-primary">Maxwell</h2>
+          <p className="mt-2 text-sm font-medium">
+            Front-end developer crafting modern, responsive, and scalable web apps.
           </p>
         </div>
 
         {/* Quick Navigation */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-secondary">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-3 text-primary">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/project" className="hover:text-accent">Project</Link></li>
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
-            <li><a href="/Keymoye_Resume.pdf" download="Keymoye_Resume.pdf" className="hover:text-muted">Resume</a></li>
+            <li>
+              <Link to="/project" className="hover:text-accent">
+                Project
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-accent">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-accent">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <a
+                href="/Keymoye_Resume.pdf"
+                download="Keymoye_Resume.pdf"
+                className="hover:text-muted"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-semibold mb-3 text-secondary">Contact</h3>
+          <h3 className="text-lg font-semibold mb-3 text-primary">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center space-x-2">
               <FaEnvelope className="h-4 w-4" />
@@ -56,7 +75,7 @@ function Footer() {
               <FaGithub className="h-5 w-5" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/keymoye-ting-4965b934a"
+              href="https://linkedin.com/in/maxwell-kimoi"
               target="_blank"
               aria-label="Visit Maxwell Kimoi's LinkedIn profile"
               rel="noopener noreferrer"
@@ -77,4 +96,4 @@ function Footer() {
     </footer>
   );
 }
-export default Footer
+export default Footer;

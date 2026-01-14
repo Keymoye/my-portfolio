@@ -5,9 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './theme-toggle';
 import logo from '../assets/logo.webp';
 
-interface NavBarProps {}
-
-function NavBar({}: NavBarProps) {
+function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 

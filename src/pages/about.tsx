@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiNextdotjs, SiPostgresql, SiPrisma, SiMongodb } from "react-icons/si";
+import { FaReact, FaGitAlt } from 'react-icons/fa';
+import {
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiJavascript,
+  SiCss3,
+  SiHtml5,
+  SiVercel,
+} from 'react-icons/si';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function About() {
@@ -11,15 +19,15 @@ export default function About() {
   const closingAnim = useScrollAnimation({ threshold: 0.3 });
 
   const techIcons = [
+    { Icon: SiHtml5, title: 'HTML5' },
+    { Icon: SiCss3, title: 'CSS3' },
+    { Icon: SiJavascript, title: 'JavaScript' },
     { Icon: FaReact, title: 'React' },
+    { Icon: SiTailwindcss, title: 'Tailwind CSS' },
+    { Icon: FaGitAlt, title: 'Git / GitHub' },
     { Icon: SiNextdotjs, title: 'Next.js' },
     { Icon: SiTypescript, title: 'TypeScript' },
-    { Icon: SiTailwindcss, title: 'Tailwind CSS' },
-    { Icon: FaNodeJs, title: 'Node.js' },
-    { Icon: SiPrisma, title: 'Prisma' },
-    { Icon: SiPostgresql, title: 'PostgreSQL' },
-    { Icon: SiMongodb, title: 'MongoDB' },
-    { Icon: FaGitAlt, title: 'Git / GitHub' },
+    { Icon: SiVercel, title: 'Vercel' },
   ];
 
   return (
@@ -42,9 +50,10 @@ export default function About() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <p className="text-lg text-foreground">
-          I'm <span className="text-accent font-medium">Maxwell Kimoi</span>, a passionate web developer from Nairobi, Kenya.
-          I began my journey by learning the theory behind how web systems connect, and now I'm channeling that understanding
-          into building real, responsive, and modern applications.
+          I'm <span className="text-accent font-medium">Maxwell Kimoi</span>, a passionate web
+          developer from Nairobi, Kenya. I began my journey by learning the theory behind how web
+          systems connect, and now I'm channeling that understanding into building real, responsive,
+          and modern applications.
         </p>
       </motion.section>
 
@@ -57,15 +66,16 @@ export default function About() {
       >
         <p className="text-lg text-foreground">
           Although I've explored full-stack technologies, my current focus is on mastering
-          <span className="text-accent font-semibold"> front-end development</span>.
-          I'm deeply confident in my theoretical background — now I'm translating that into practical, real-world projects.
-          This portfolio marks my first fully self-built project from scratch, a big step from my earlier guided tutorials.
+          <span className="text-accent font-semibold"> front-end development</span>. I'm deeply
+          confident in my theoretical background — now I'm translating that into practical,
+          real-world projects. This portfolio marks my first fully self-built project from scratch,
+          a big step from my earlier guided tutorials.
         </p>
 
         <p className="text-lg text-foreground">
-          I enjoy crafting clean interfaces, writing structured code, and creating experiences that feel intuitive.
-          My long-term goal is to evolve into a well-rounded full-stack engineer while maintaining a strong eye
-          for design, performance, and user experience.
+          I enjoy crafting clean interfaces, writing structured code, and creating experiences that
+          feel intuitive. My long-term goal is to evolve into a well-rounded full-stack engineer
+          while maintaining a strong eye for design, performance, and user experience.
         </p>
       </motion.section>
 
@@ -101,7 +111,8 @@ export default function About() {
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <p>
-          Every line of code I write is part of my journey from theory to mastery — I'm learning, applying, and improving daily.
+          Every line of code I write is part of my journey from theory to mastery — I'm learning,
+          applying, and improving daily.
         </p>
       </motion.section>
     </main>

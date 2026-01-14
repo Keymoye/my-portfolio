@@ -35,8 +35,7 @@ const App = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          Front-end <span className="text-primary font-semibold"> || </span> Backend{' '}
-          <span className="text-primary font-semibold">||</span> Fullstack Developer
+          Front-end Developer based in Nairobi, Kenya.
         </motion.p>
       </motion.div>
 

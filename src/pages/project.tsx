@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Projects() {
@@ -7,36 +7,44 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Weather App",
+      title: 'Weather App',
       description:
-        "A responsive front-end weather application showing real-time conditions. Helped me master state management and component-based design.",
-      tech: ["React", "Tailwind CSS"],
-      live: "https://weather-app-keymoye.vercel.app",
-      github: "https://github.com/Keymoye/weather-app",
+        'A responsive front-end weather application showing real-time conditions. React Query adds centralized query caching, localStorage persistence, custom error handling, and an error boundary for improved runtime error recovery.',
+      tech: ['React', 'Tailwind CSS', 'React Query'],
+      live: 'https://weather-app-keymoye.vercel.app',
+      github: 'https://github.com/Keymoye/weather-app',
     },
     {
-      title: "To-Do List App",
+      title: 'To-Do List App',
       description:
-        "A full-stack task management tool that strengthened my understanding of React, Tailwind, and responsive UI patterns.",
-      tech: ["React", "Tailwind CSS"],
-      live: "https://todo-list-keymoye.vercel.app",
-      github: "https://github.com/Keymoye/todo-list",
+        'A straightforward and user-friendly To Do List application designed to help you organize your daily tasks and boost productivity. This app lets you add, view, complete, and remove tasks with ease.',
+      tech: ['React', 'Tailwind CSS'],
+      live: 'https://todo-list-keymoye.vercel.app',
+      github: 'https://github.com/Keymoye/todo-list',
     },
     {
-      title: "Portfolio Website",
+      title: 'Portfolio Website',
       description:
-        "My first project built entirely from scratch — a full React + Tailwind portfolio showcasing my design system, accessibility, and responsive layout skills.",
-      tech: ["React", "TypeScript", "Tailwind CSS"],
-      live: "https://keymoye-portfolio.vercel.app",
-      github: "https://github.com/Keymoye/my-portfolio",
+        'A modern, fast, and fully responsive developer portfolio built with React, TypeScript, Vite, and Tailwind CSS. Designed with premium UI/UX principles, smooth animations, a production-grade contact workflow, and perfect Lighthouse scores.',
+      tech: ['React', 'TypeScript', 'Tailwind CSS'],
+      live: 'https://keymoye-portfolio.vercel.app',
+      github: 'https://github.com/Keymoye/my-portfolio',
     },
-     {
-      title: "E-Commerce Website",
+    {
+      title: 'E-Commerce Website',
       description:
-        "(In Development Process)A modern e-commerce web app built with Next.js,Typescript, and Supabase — featuring seamless authentication, dynamic product listings, and a clean, responsive UI powered by Tailwind CSS and Framer Motion for smooth animations.",
-      tech: ["Next", "TypeScript", "Tailwind CSS","Supabase","Zustand","RHF + Zod","Framer Motion"],
-      live: "https://e-commerce-keystore.vercel.app",
-      github: "https://github.com/Keymoye/e-commerce",
+        '(In Development Process)A modern e-commerce web app built with Next.js,Typescript, and Supabase — featuring seamless authentication, dynamic product listings, and a clean, responsive UI powered by Tailwind CSS and Framer Motion for smooth animations.',
+      tech: [
+        'Next',
+        'TypeScript',
+        'Tailwind CSS',
+        'Supabase',
+        'Zustand',
+        'RHF + Zod',
+        'Framer Motion',
+      ],
+      live: 'https://e-commerce-keystore.vercel.app',
+      github: 'https://github.com/Keymoye/e-commerce',
     },
   ];
 
@@ -77,7 +85,7 @@ export default function Projects() {
         className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"
         variants={containerVariants}
         initial="hidden"
-        animate={headingAnim.isVisible ? "visible" : "hidden"}
+        animate={headingAnim.isVisible ? 'visible' : 'hidden'}
       >
         {projects.map((project) => (
           <motion.div
@@ -87,13 +95,9 @@ export default function Projects() {
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             className="bg-foreground/5 border border-muted/30 rounded-xl p-6 flex flex-col justify-between shadow-lg hover:shadow-2xl hover:border-primary/50 transition-all"
           >
-            <h2 className="text-2xl font-semibold text-primary mb-3">
-              {project.title}
-            </h2>
+            <h2 className="text-2xl font-semibold text-primary mb-3">{project.title}</h2>
 
-            <p className="text-foreground mb-4 text-sm leading-relaxed">
-              {project.description}
-            </p>
+            <p className="text-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tech.map((t) => (
