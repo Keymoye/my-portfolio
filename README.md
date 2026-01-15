@@ -31,33 +31,34 @@ This portfolio represents my **professional identity** as a developer — crafte
 
 It demonstrates excellence in:
 
-- UI polish  
-- Component architecture  
+- UI polish
+- Component architecture
 - Accessibility
-- Full-stack integration(via Formspree)  
-- Testing and code quality  
-- Production-ready performance  
+- Full-stack integration(via Formspree)
+- Testing and code quality
+- Production-ready performance
 
 ---
 
 ## 🚀 Features
 
-| Icon | Feature | Description |
-| :--: | ------- | ----------- |
-| 🎨 | **Modern UI** | Smooth animations, responsive layout, elegant design |
-| 🌓 | **Dark / Light Theme** | Persistent theme toggle using local storage |
-| 🧭 | **Accessible Navigation** | Full keyboard support + ARIA-compliant mobile menu |
-| ✉️ | **Contact Form (Formspree)** | Secure submission + validation + loading & error states |
-| ⚡ | **High Performance** | Perfect Lighthouse scores across all categories |
-| 🧪 | **Tested Components** | Vitest + React Testing Library |
-| 🧱 | **Type-Safe Codebase** | Built fully with TypeScript |
-| 🗂️ | **Organized Architecture** | Clean folder structure and component reuse |
+| Icon | Feature                      | Description                                             |
+| :--: | ---------------------------- | ------------------------------------------------------- |
+|  🎨  | **Modern UI**                | Smooth animations, responsive layout, elegant design    |
+|  🌓  | **Dark / Light Theme**       | Persistent theme toggle using local storage             |
+|  🧭  | **Accessible Navigation**    | Full keyboard support + ARIA-compliant mobile menu      |
+|  ✉️  | **Contact Form (Formspree)** | Secure submission + validation + loading & error states |
+|  ⚡  | **High Performance**         | Perfect Lighthouse scores across all categories         |
+|  🧪  | **Tested Components**        | Vitest + React Testing Library                          |
+|  🧱  | **Type-Safe Codebase**       | Built fully with TypeScript                             |
+|  🗂️  | **Organized Architecture**   | Clean folder structure and component reuse              |
 
 ---
 
 ## 🛠 Tech Stack
 
 ### **Frontend**
+
 - React 19
 - TypeScript
 - Tailwind CSS
@@ -65,12 +66,14 @@ It demonstrates excellence in:
 - React Router
 
 ### **Build & Tooling**
+
 - Vite
 - ESLint + Prettier
 - Vitest + React Testing Library
 - pnpm (package manager)
-  
+
 ### **Backend Integration**
+
 - Formspree (contact form handling)
 
 ---
@@ -110,13 +113,13 @@ my-portfolio/
 
 ### Core Web Vitals
 
-| Metric | Value |
-| ------ | ----- |
-| **FCP** (First Contentful Paint) | 0.5 s |
+| Metric                             | Value |
+| ---------------------------------- | ----- |
+| **FCP** (First Contentful Paint)   | 0.5 s |
 | **LCP** (Largest Contentful Paint) | 0.5 s |
-| **TBT** (Total Blocking Time) | 10 ms |
-| **CLS** (Cumulative Layout Shift) | 0 |
-| **Speed Index** | O.9 s |
+| **TBT** (Total Blocking Time)      | 10 ms |
+| **CLS** (Cumulative Layout Shift)  | 0     |
+| **Speed Index**                    | O.9 s |
 
 **Lighthouse Screenshots:**
 
@@ -128,40 +131,46 @@ my-portfolio/
 ## 🧩 Installation & Setup
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/Keymoye/my-portfolio.git
 cd my-portfolio
 ```
 
 2. **Install dependencies**
+
 ```bash
 pnpm install
 ```
 
 3. **Run locally**
+
 ```bash
 pnpm run dev
 ```
 
 4. **Build for production**
+
 ```bash
 pnpm run build
 ```
 
 5. **Preview production build**
+
 ```bash
 pnpm run preview
 ```
 
 ---
+
 # Contact Form (Formspree)
 
 This project uses **Formspree** for secure email delivery.
 
 ## Configuration Steps
 
-1. Visit [Formspree](https://formspree.io)  
-2. Create a new form endpoint  
+1. Visit [Formspree](https://formspree.io)
+2. Create a new form endpoint
 3. Replace your form `action` with your endpoint:
 
 ```html
@@ -169,6 +178,7 @@ This project uses **Formspree** for secure email delivery.
   <!-- your form fields -->
 </form>
 ```
+
 ---
 
 ## 🧪 Testing
@@ -198,6 +208,7 @@ pnpm run test:coverage
 This project is deployed on **Vercel**.
 
 **Build settings:**
+
 - Build command: `pnpm run build`
 - Output directory: `dist`
 - Install command: `pnpm install`
@@ -206,11 +217,11 @@ This project is deployed on **Vercel**.
 
 ## 🧪 Test Environment (for Lighthouse report)
 
-- **Device:** Emulated Desktop  
-- **Browser:** Chromium 142  
-- **Lighthouse:** 12.8.2  
-- **Session:** Initial page load  
-- **Throttling:** Custom  
+- **Device:** Emulated Desktop
+- **Browser:** Chromium 142
+- **Lighthouse:** 12.8.2
+- **Session:** Initial page load
+- **Throttling:** Custom
 
 ---
 
@@ -225,7 +236,7 @@ See [LICENSE](./LICENSE) for more details.
 
 **Maxwell Kimoi (Keymoye)**  
 📍 Nairobi, Kenya  
-💼 Full-Stack Developer — React • TypeScript • Tailwind • Vite  
+💼 Front-end Developer — React • TypeScript • Tailwind • Vite  
 🌐 https://keymoye-portfolio.vercel.app  
 🐙 GitHub: https://github.com/Keymoye  
 📧 Email: bowenmaxwell9@gmail.com
@@ -233,4 +244,3 @@ See [LICENSE](./LICENSE) for more details.
 ---
 
 ⭐ **If you found this project useful, please consider starring the repository!**
-
